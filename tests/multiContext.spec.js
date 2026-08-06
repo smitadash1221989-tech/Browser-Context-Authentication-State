@@ -32,7 +32,7 @@ test("verify isolation",async({browser})=>{
     const context2 = await browser.newContext();
     const page2 = await context2.newPage();
     await page2.goto("https://www.saucedemo.com/inventory.html");
-    await page2.pause();
+    //await page2.pause();
     await expect(page2).toHaveURL(/saucedemo/);
     console.log("page2 is not logged in so it doesnot navigate to inventory, it stays in saucedemo login page");
 
